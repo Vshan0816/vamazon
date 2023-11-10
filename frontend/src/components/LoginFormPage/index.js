@@ -1,16 +1,19 @@
 import React, { useEffect } from "react"
 import { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { login } from "../../store/session"
-import { ReactSVG } from "react-svg"
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min"
 import AmazonLogo from "../../assets/AmazonLogo.png"
 import './LoginForm.css'
 
 
 const LoginFormPage = () => {
     const dispatch = useDispatch()
+    const sessionUser = useSelector(state => state.session.user);
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    if (sessionUser) return <Redirect to="/" />
 
     const handleSubmit = (e) => {
         e.preventDefault()
