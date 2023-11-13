@@ -37,24 +37,30 @@ const LoginFormPage = () => {
     return (
         <div id="outerDiv">
             <form onSubmit={handleSubmit}>
-                <div id="formDiv">  
                     <ul>
                         {errors.map(error => <li key={error}>{error}</li>)}
                     </ul>
+                <div id="formDiv">                   
                     <div id="signIn">
-                        <h1>Sign In</h1>
+                        <h1 className="h1">Sign in</h1>
                     </div>
                     <div id="email">
-                        <label>Email
-                            <input type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-                        </label>
+                        <label>Email</label>
                     </div>
+                    <div>
+                        <input className="input" type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+                    </div>    
+                    
                     <div id="password">
-                        <label>Password
-                            <input type="text" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
-                        </label>
+                        <label>Password</label>
                     </div>
-                        <button>Sign In</button>
+                    <div>
+                        <input type="text" className="input" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
+                    </div>    
+                    
+                    <button type="submit">Login</button>
+                    <button type="submit">Login Demo User</button>
+                    <button type="submit">Continue</button>
                 </div>
             </form>
         </div>
