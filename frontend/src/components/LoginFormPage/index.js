@@ -35,28 +35,29 @@ const LoginFormPage = () => {
     }
 
     return (
-        
-        <form onSubmit={handleSubmit}>
-            <div id="outerDiv">
-                <div id="innerDiv">
-                        {/* <img src={AmazonLogo} alt="AmazonLogo"></img> */}
-                </div>
-            </div>   
-    
-            <div id="formDiv">      
+        <div id="outerDiv">
+            <form onSubmit={handleSubmit}>
+                <div id="formDiv">  
                     <ul>
                         {errors.map(error => <li key={error}>{error}</li>)}
                     </ul>
-                    <label>Email
-                        <input type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-                    </label>
-                    <label>Password
-                        <input type="text" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
-                    </label>
-                    <button>Sign In</button>
-            </div>
-        </form>
-        
+                    <div id="signIn">
+                        <h1>Sign In</h1>
+                    </div>
+                    <div id="email">
+                        <label>Email
+                            <input type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+                        </label>
+                    </div>
+                    <div id="password">
+                        <label>Password
+                            <input type="text" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
+                        </label>
+                    </div>
+                        <button>Sign In</button>
+                </div>
+            </form>
+        </div>
     )
 }
 
