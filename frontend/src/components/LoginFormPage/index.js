@@ -3,8 +3,8 @@ import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { login } from "../../store/session"
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min"
-import AmazonLogo from "../../assets/AmazonLogo.png"
 import './LoginForm.css'
+import logo from "../../assets/Logo1.png"
 
 
 const LoginFormPage = () => {
@@ -37,30 +37,34 @@ const LoginFormPage = () => {
     return (
         <div id="outerDiv">
             <form onSubmit={handleSubmit}>
+                    <div id="logoDiv">   
+                        <img id="logo" src={logo}></img>    
+                    </div>   
                     <ul>
                         {errors.map(error => <li key={error}>{error}</li>)}
                     </ul>
-                <div id="formDiv">                   
+                <div id="formDiv">  
+                           
                     <div id="signIn">
                         <h1 className="h1">Sign in</h1>
                     </div>
-                    <div id="email">
+                    <div className="signInLabel">
                         <label>Email</label>
                     </div>
                     <div>
                         <input className="input" type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
                     </div>    
                     
-                    <div id="password">
+                    <div className="signInLabel">
                         <label>Password</label>
                     </div>
                     <div>
                         <input type="text" className="input" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                     </div>    
                     
-                    <button type="submit">Login</button>
-                    <button type="submit">Login Demo User</button>
-                    <button type="submit">Continue</button>
+                    <button className="button" type="submit">Login</button>
+                    <button className="button" type="submit">Login Demo User</button>
+                    <button className="button" type="submit">Continue</button>
                 </div>
             </form>
         </div>

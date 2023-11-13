@@ -33,7 +33,7 @@
     font-family: 'Amazon Ember', Arial, sans-serif;
 }
 
-#email {
+.signInLabel {
     font-size: 13px;
     font-weight: bold;
     font-family: 'Amazon Ember', Arial, sans-serif;
@@ -54,4 +54,15 @@
     height: 31px;
     padding-left: 10;
     padding-right: 10;
+}
+
+#logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#logo {
+    max-width:100%
 }
