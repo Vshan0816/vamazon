@@ -81,3 +81,13 @@
     padding: 7px;
     margin-bottom: 10px;
 }
+
+.button:hover {
+    background: #e6bc06;
+    cursor: pointer;
+}
+
+/* #errors {
+    border-radius: 3px;
+    border: solid 2px red;
+} */

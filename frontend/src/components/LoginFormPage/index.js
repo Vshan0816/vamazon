@@ -5,7 +5,7 @@ import { login } from "../../store/session"
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min"
 import './LoginForm.css'
 import logo from "../../assets/Logo1.png"
-
+import Errors from "../Errors"
 
 const LoginFormPage = () => {
     const dispatch = useDispatch()
@@ -39,10 +39,10 @@ const LoginFormPage = () => {
             <form onSubmit={handleSubmit}>
                     <div id="logoDiv">   
                         <img id="logo" src={logo}></img>    
-                    </div>   
-                    <ul>
-                        {errors.map(error => <li key={error}>{error}</li>)}
-                    </ul>
+                    </div>
+                    <div id="errors">  
+                        <Errors errors={errors}/>
+                    </div> 
                 <div id="formDiv">  
                            
                     <div id="signIn">
