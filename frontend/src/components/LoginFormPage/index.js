@@ -37,11 +37,11 @@ const LoginFormPage = () => {
     return (
         <div className="outerDiv">
             <form className="form" onSubmit={handleSubmit}>
-                    <div id="logoDiv">   
-                        <img id="logo" src={logo}></img>    
-                    </div>
+                <div className="logoDiv">   
+                    <img className="logo" src={logo}></img>    
+                </div>
                      
-                    <Errors errors={errors}/>
+                <Errors errors={errors}/>
                     
                 <div className="formDiv">  
                            
