@@ -35,15 +35,15 @@ const LoginFormPage = () => {
     }
 
     return (
-        <div id="outerDiv">
-            <form onSubmit={handleSubmit}>
+        <div className="outerDiv">
+            <form className="form" onSubmit={handleSubmit}>
                     <div id="logoDiv">   
                         <img id="logo" src={logo}></img>    
                     </div>
-                    <div id="errors">  
-                        <Errors errors={errors}/>
-                    </div> 
-                <div id="formDiv">  
+                     
+                    <Errors errors={errors}/>
+                    
+                <div className="formDiv">  
                            
                     <div id="signIn">
                         <h1 className="h1">Sign in</h1>

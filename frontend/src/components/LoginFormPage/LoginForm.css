@@ -3,8 +3,12 @@
     src: url('../../fonts/Ember/AmazonEmber_Lt.ttf') format('ttf');
     /* Include additional formats if necessary (TTF, EOT, etc.) */
 }
+.form {
+    width: 350px;
+    height: auto;
+}
 
-#formDiv {
+.formDiv {
     display: flex;
     flex-direction: column;
     width: 350px;
@@ -16,9 +20,9 @@
     padding: 20px
 }
 
-#outerDiv {
+.outerDiv {
     width:100%;
-    height:100px;
+    height:auto;
     display: flex;
     justify-content: center;
 }
