@@ -65,6 +65,8 @@ const LoginFormPage = () => {
                     <button className="button" type="submit">Login</button>
                     <button className="button" type="submit">Login Demo User</button>
                     <button className="button" type="submit">Continue</button>
+
+                    
                 </div>
             </form>
         </div>
