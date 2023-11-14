@@ -7,8 +7,9 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <>
-      {/* <Navigation/> */}
+      
       <Switch>
+          <Route exact path="/"> <Navigation/> </Route>
           <Route path="/signup"> <SignupFormPage/> </Route>
           <Route path="/login"> <LoginFormPage/> </Route>
       </Switch>
