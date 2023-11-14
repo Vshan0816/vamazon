@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { login } from "../../store/session"
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min"
+import { Redirect } from "react-router-dom/cjs/react-router-dom"
 import './LoginForm.css'
 import logo from "../../assets/Logo1.png"
 import Errors from "../Errors"

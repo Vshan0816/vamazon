@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min"
+
 const LoginButton = ({user}) =>{
     if (user) {
        return (
@@ -8,8 +10,9 @@ const LoginButton = ({user}) =>{
                     <p className="p1">Hello, sign in</p>
                     <p className="p2">Account, & Lists</p>
                 </span>
-                <div class="loginDiv-content">
-                    <button>Sign In</button>
+                <div className="loginDiv-content">
+                    <Link to="/login"><button className="button">Sign In</button></Link>
+                    <p className="p3">New Customer? <Link to="/signup">Start Here</Link></p>
                 </div>
             </div>
             <div></div>
