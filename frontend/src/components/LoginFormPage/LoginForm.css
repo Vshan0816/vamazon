@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Amazon Ember';
+    src: url('../../fonts/Ember/AmazonEmber_Lt.ttf') format('ttf');
+}
+
+.form {
+    width: 350px;
+    height: auto;
+}
+
+.formDiv {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    box-sizing: border-box;
+    /* flex-wrap: wrap; */
+    border: 1px solid #E5E0DE;
+    border-radius: 5px;
+    padding: 20px
+}
+
+.outerDiv {
+    width:100%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+}
+
+#innerDiv {
+    height:100 px;
+    width: 30 px;
+}
+
+#signIn {
+    font-size: 14px;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    
+}
+
+.signInLabel {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    padding-left: 2;
+    padding-bottom: 2;
+}
+
+.h1 {
+    margin-top: 0;
+    margin-bottom: 10;
+    font-weight: 530;
+    font-size: 28px;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 3px;
+    border: solid 1px, #a6a6a6;
+    height: 31px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo {
+    max-width:100%
+}
+
+.button {
+    background: #f7ce20;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #f7ce20;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background: #e6bc06;
+    cursor: pointer;
+}
+
