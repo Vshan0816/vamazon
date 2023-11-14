@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Amazon Ember';
     src: url('../../fonts/Ember/AmazonEmber_Lt.ttf') format('ttf');
-    /* Include additional formats if necessary (TTF, EOT, etc.) */
 }
+
 .form {
     width: 350px;
     height: auto;
@@ -91,7 +91,3 @@
     cursor: pointer;
 }
 
-/* #errors {
-    border-radius: 3px;
-    border: solid 2px red;
-} */

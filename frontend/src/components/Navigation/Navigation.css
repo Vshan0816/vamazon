@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Amazon Ember';
+    src: url('../../fonts/Ember/AmazonEmber_Lt.ttf') format('ttf');
+}
+
 .navbar {
     box-sizing: border-box;
     width:100%;
@@ -6,7 +11,7 @@
     display: grid;
     grid-template-columns: 300px 800px 400px;
     grid-template-rows: 1fr;
-    overflow:hidden;
+    /* overflow:hidden; */
 }
 
 .one {
@@ -22,7 +27,8 @@
 
 .three {
     
-
+    display:flex;
+    justify-content: space-evenly;
     grid-column: 3/span 1;
     color:white;
 
@@ -33,13 +39,38 @@
 }
 
 .loginDiv {
-    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginDiv:hover .loginDiv-content {
+    display: block; 
+}
+
+.loginDiv-content {
+    top: 100%;
+    left: -50px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .p1 {
-    
+    display: block;
+    font-size: 12px;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    margin:0;
 }
 
 .p2 {
-    
+    display: block;
+    font-size:14px;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    margin:0;
+    font-weight: bold;
 }
