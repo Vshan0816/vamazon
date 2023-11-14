@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: vamazon_production
-  username: vamazon
-  password: <%= ENV["VAMAZON_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
