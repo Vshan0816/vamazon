@@ -96,5 +96,11 @@
     border-radius: 5px;
     border: solid 1px #f7ce20;
     padding: 7px;
+    width: 277px;
     margin-bottom: 10px;
+}
+
+.button2:hover {
+    background: #e6bc06;
+    cursor: pointer;
 }
