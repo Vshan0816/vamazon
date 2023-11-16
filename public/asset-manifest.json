@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.194561f3.css",
+    "main.js": "/static/js/main.bdc7858c.js",
+    "static/media/AmazonEmber_Lt.ttf": "/static/media/AmazonEmber_Lt.327fc56aff92da01c853.ttf",
+    "index.html": "/index.html",
+    "main.194561f3.css.map": "/static/css/main.194561f3.css.map",
+    "main.bdc7858c.js.map": "/static/js/main.bdc7858c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.194561f3.css",
+    "static/js/main.bdc7858c.js"
+  ]
+}
