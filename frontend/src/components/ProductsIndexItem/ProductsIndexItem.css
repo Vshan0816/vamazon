@@ -1,9 +1,20 @@
+.outerImgDiv {
+    display:flex;
+    flex-direction: column;
+    width: 18.2%;
+    margin: 5px;
+}
+
 .itemBodyDiv {
     display: flex;
+    flex-direction: column;
+    flex: 1;
     justify-content: center;
+    border: solid 1px #ECEBEA
 }
 
 .itemImgDiv {
+    flex: 1;
     display: flex;
     justify-content: center;
     background-color: #ECEBEA
@@ -13,10 +24,7 @@
     max-width:80%
 }
 
-.outerImgDiv {
-    width: 18.2%;
-    margin: 5px;
-}
+
 
 .centerText {
     text-align: center

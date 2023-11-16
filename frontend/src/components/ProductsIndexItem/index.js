@@ -8,6 +8,8 @@ const ProductsIndexItem = ({product}) => {
             </div>
             <div className="itemBodyDiv">
                 <p className="centerText">{product.name}</p>
+                <br/>
+                <p className="centerText">{product.price}</p>
             </div>
         </div>    
     )

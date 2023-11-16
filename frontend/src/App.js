@@ -14,6 +14,7 @@ function App() {
              <Navigation/> 
              <ProductsIndex/>
           </Route>
+          <Route path="/products/:productId"
           <Route path="/signup"> <SignupFormPage/> </Route>
           <Route path="/login"> <LoginFormPage/> </Route>
       </Switch>
