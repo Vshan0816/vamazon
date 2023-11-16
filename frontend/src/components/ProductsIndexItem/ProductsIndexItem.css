@@ -1,3 +1,4 @@
+
 .outerImgDiv {
     display:flex;
     flex-direction: column;
@@ -28,4 +29,28 @@
 
 .centerText {
     text-align: center
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+}
+
+.smallText {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 13px;
+    margin: 0px;
+}
+
+.largeText {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 27px;
+    margin: 0px;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    height: 18px
 }

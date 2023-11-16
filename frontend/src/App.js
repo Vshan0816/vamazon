@@ -16,6 +16,7 @@ function App() {
              <ProductsIndex/>
           </Route>
           <Route path="/products/:productId">
+              <Navigation/>
               <ProductsShow/>
           </Route>
           <Route path="/signup"> <SignupFormPage/> </Route>

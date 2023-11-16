@@ -5,7 +5,6 @@
 
 .leftDiv {
     grid-column: 1/span 1;
-    border: 2px solid black;
 }
 
 .rightDiv {
@@ -16,4 +15,11 @@
 
 .results {
     width: 100%;
+}
+
+.results p {
+    margin-left: 4px;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
