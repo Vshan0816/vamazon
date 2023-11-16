@@ -1,0 +1,15 @@
+.productsIndex {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.leftDiv {
+    grid-column: 1/span 1;
+    border: 2px solid black;
+}
+
+.rightDiv {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 2/span 1;
+}
