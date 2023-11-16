@@ -15,6 +15,10 @@ const ProductsIndex = () => {
         <div className="productsIndex">
             <div className="leftDiv"></div>
             <div className="rightDiv">
+                    <div className="results">
+                        <p>Results</p>
+                        <br/>
+                    </div>
                     {products.map(product=>{
                         return <ProductsIndexItem key={product.id} product={product}/>
                     })}

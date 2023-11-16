@@ -13,3 +13,7 @@
     flex-wrap: wrap;
     grid-column: 2/span 1;
 }
+
+.results {
+    width: 100%;
+}

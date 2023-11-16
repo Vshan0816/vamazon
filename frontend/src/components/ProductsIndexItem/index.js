@@ -6,8 +6,8 @@ const ProductsIndexItem = ({product}) => {
             <div className="itemImgDiv">
                 <img src={sf6}></img>
             </div>
-            <div className="itemDiv">
-                <p>{product.name}</p>
+            <div className="itemBodyDiv">
+                <p className="centerText">{product.name}</p>
             </div>
         </div>    
     )

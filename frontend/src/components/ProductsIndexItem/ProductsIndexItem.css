@@ -1,9 +1,11 @@
-.itemDiv {
-    
+.itemBodyDiv {
+    display: flex;
+    justify-content: center;
 }
 
 .itemImgDiv {
-    
+    display: flex;
+    justify-content: center;
     background-color: #ECEBEA
 }
 
@@ -13,5 +15,9 @@
 
 .outerImgDiv {
     width: 18.2%;
-    margin: 10px;
+    margin: 5px;
+}
+
+.centerText {
+    text-align: center
 }
