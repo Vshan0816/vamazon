@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_14_201802) do
     t.float "price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category"], name: "index_products_on_category", unique: true
+    t.index ["category"], name: "index_products_on_category"
     t.index ["name"], name: "index_products_on_name", unique: true
   end
 

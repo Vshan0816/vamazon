@@ -41,5 +41,15 @@ ApplicationRecord.transaction do
       }) 
     end
   
+    # More products
+    10.times do
+      Product.create!({
+        name: Faker::Game.title,
+        description: "Capcom's brand new fighting game",
+        category: "game", 
+        price: 69.99
+      })
+    end
+    
     puts "Done!"
   end
