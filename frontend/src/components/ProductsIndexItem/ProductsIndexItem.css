@@ -1,3 +1,17 @@
 .itemDiv {
-    width: 20%;
+    
+}
+
+.itemImgDiv {
+    
+    background-color: #ECEBEA
+}
+
+.itemImgDiv img {
+    max-width:80%
+}
+
+.outerImgDiv {
+    width: 18.2%;
+    margin: 10px;
 }
