@@ -1,6 +1,7 @@
 import './ProductsIndexItem.css'
 import sf6 from '../../assets/SF6.png'
 import star from '../../assets/5Star.png'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 const ProductsIndexItem = ({product}) => {
     const beforeDecimal = parseInt(product.price)
     const afterDecimal = parseInt((product.price).toString().split('.')[1])
@@ -8,10 +9,12 @@ const ProductsIndexItem = ({product}) => {
     return (
         <div className="outerImgDiv">  
             <div className="itemImgDiv">
-                <img src={sf6}></img>
+                <Link className="itemLink" to={`/products/${product.id}`}><img className="itemImg" src={sf6}></img></Link>
             </div>
             <div className="itemBodyDiv">
-                <p className="centerText">{product.name}</p>
+                <Link to={`/products/${product.id}`}>
+                    <p className="centerText">{product.name}</p>
+                </Link>
                 <div className="star">
                     <img src={star} alt="rating"></img>
                 </div>
