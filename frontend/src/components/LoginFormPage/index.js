@@ -34,6 +34,10 @@ const LoginFormPage = () => {
             });
     }
 
+    const loginDemo = (e) => {
+        e.preventDefault()
+        return dispatch(login({email: "demo@user.io", password:"password"}))
+    }
     return (
         <div className="outerDiv">
             <form className="form" onSubmit={handleSubmit}>
@@ -63,8 +67,8 @@ const LoginFormPage = () => {
                     </div>    
                     
                     <button className="button" type="submit">Login</button>
-                    <button className="button" type="submit">Login Demo User</button>
-                    <button className="button" type="submit">Continue</button>
+                    <button className="button" onClick={loginDemo}>Login Demo User</button>
+                    
 
                     
                 </div>
