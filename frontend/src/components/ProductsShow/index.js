@@ -6,9 +6,14 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min"
 import sf6 from '../../assets/SF6.png'
 import './ProductsShow.css'
 const ProductsShow = () => {
+    
+
     const { productId } = useParams()
     const dispatch = useDispatch();
     const product = useSelector(getProduct(productId))
+
+    const beforeDecimal = parseInt(product.price)
+    const afterDecimal = parseInt((product.price).toString().split('.')[1])
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
@@ -24,7 +29,24 @@ const ProductsShow = () => {
                 
                 <p className="showName">{product.name}</p>
                 <div className="divider"></div>
-                <p className="showDescription">{product.description}</p>
+                <div className="showPrice"> 
+                    <div>
+                        <p className="smallText">$</p>
+                    </div>
+                    <div>
+                        <p className="largeText">{beforeDecimal}</p>
+                    </div>
+                    <div>
+                        <p className="smallText">{afterDecimal}</p>
+                    </div>
+                </div>
+                <div className="divider"></div>
+                <div>
+                    <p className="aboutItem">About This Item</p>
+                    <li className="showDescription">{product.description}</li>
+                </div>
+                
+                
                 
             </div>
         </div>    
