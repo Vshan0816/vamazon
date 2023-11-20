@@ -1,0 +1,62 @@
+
+.outerImgDiv {
+    display:flex;
+    flex-direction: column;
+    width: 18.2%;
+    margin: 5px;
+}
+
+.itemBodyDiv {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    border: solid 1px #ECEBEA
+}
+
+.itemImgDiv {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: #ECEBEA
+}
+
+.itemLink {
+    display: flex;
+    justify-content: center;
+}
+
+.itemImg {
+    text-align: center;
+    max-width:80%
+}
+
+
+
+.centerText {
+    text-align: center
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+}
+
+.smallText {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 13px;
+    margin: 0px;
+}
+
+.largeText {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 27px;
+    margin: 0px;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    height: 18px
+}

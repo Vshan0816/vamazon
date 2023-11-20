@@ -1,0 +1,51 @@
+.showOuterDiv {
+    display: grid;
+    grid-template-columns: 10% 35% 35% 20%;
+}
+
+.div1 {
+    grid-column: 1/span 1;
+}
+
+.showImageDiv {
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / span 1;
+}
+
+.showBodyDiv {
+    grid-column: 3 / span 1
+}
+
+.showName { 
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0;
+
+}
+
+.divider {
+    margin-top: 5px;
+    border-bottom: 1px solid #ACACAC;
+}
+
+.showPrice {
+    display:flex;
+    height: 35px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.aboutItem {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.bottomDivider {
+    grid-column: 1 / span 3;
+    border-bottom: 1px solid #ACACAC;
+    margin: 10px;
+}

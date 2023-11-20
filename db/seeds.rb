@@ -10,17 +10,26 @@ ApplicationRecord.transaction do
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
-  
+    Product.destroy_all
+
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
-  
+    ApplicationRecord.connection.reset_pk_sequence!('products')
+
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
     User.create!(
       name: 'Demo-lition', 
       email: 'demo@user.io', 
       password: 'password'
+    )
+
+    Product.create!(
+      name:'Street Fighter 6',
+      description: "Capcom's brand new fighting game",
+      category: "game", 
+      price: 69.99
     )
   
     # More users
@@ -32,5 +41,15 @@ ApplicationRecord.transaction do
       }) 
     end
   
+    # More products
+    10.times do
+      Product.create!({
+        name: Faker::Game.title,
+        description: "Capcom's brand new fighting game",
+        category: "game", 
+        price: 69.99
+      })
+    end
+    
     puts "Done!"
   end

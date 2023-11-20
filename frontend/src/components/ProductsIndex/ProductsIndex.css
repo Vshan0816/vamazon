@@ -1,0 +1,25 @@
+.productsIndex {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.leftDiv {
+    grid-column: 1/span 1;
+}
+
+.rightDiv {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 2/span 1;
+}
+
+.results {
+    width: 100%;
+}
+
+.results p {
+    margin-left: 4px;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
