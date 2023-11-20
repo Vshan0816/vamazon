@@ -36,7 +36,7 @@ const LoginFormPage = () => {
 
     const loginDemo = (e) => {
         e.preventDefault()
-        return dispatch(login({email: "demo@user.io", password:"password"}))
+        dispatch(login({email:"demo@user.io", password:"password"}))
     }
     return (
         <div className="outerDiv">
