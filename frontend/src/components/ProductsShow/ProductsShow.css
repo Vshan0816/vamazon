@@ -43,3 +43,9 @@
     font-weight: bold;
     margin-bottom: 4px;
 }
+
+.bottomDivider {
+    grid-column: 1 / span 3;
+    border-bottom: 1px solid #ACACAC;
+    margin: 10px;
+}

@@ -46,9 +46,8 @@ const ProductsShow = () => {
                     <li className="showDescription">{product.description}</li>
                 </div>
                 
-                
-                
             </div>
+            <div className="bottomDivider"></div>
         </div>    
     )
 }
