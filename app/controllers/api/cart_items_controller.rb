@@ -6,34 +6,39 @@ class Api::CartItemsController < ApplicationController
         render :index
     end
 
+    def show
+        @cart_item = current_user.cart_items.find(params[:id])
+        render :show
+    end
+
     def create
         @cart_item = current_user.cart_items.build(cart_item_params)
     
         if @cart_item.save
-          render json: @cart_item, status: :created
+          render :show
         else
           render json: @cart_item.errors, status: :unprocessable_entity
         end
-      end
+    end
     
-      def update
+    def update
         @cart_item = current_user.cart_items.find(params[:id])
         if @cart_item.update(cart_item_params)
-          render json: @cart_item
+          render :show
         else
           render json: @cart_item.errors, status: :unprocessable_entity
         end
-      end
+    end
     
-      def destroy
+    def destroy
         @cart_item = current_user.cart_items.find(params[:id])
         @cart_item.destroy
         head :no_content
-      end
+    end
     
-      private
+    private
     
-      def cart_item_params
+    def cart_item_params
         params.require(:cart_item).permit(:product_id, :quantity)
-      end
+    end
 end
