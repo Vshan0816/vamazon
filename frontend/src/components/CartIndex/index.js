@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux"
 import { fetchProducts, getProducts } from "../../store/product"
 import { useEffect } from "react"
 import { useSelector } from "react-redux/es/hooks/useSelector"
-import './ProductsIndex.css'
 import { fetchCartItems, getCartItems } from "../../store/cartItems"
 
 const CartIndex = () => {
@@ -11,7 +10,8 @@ const CartIndex = () => {
     const dispatch = useDispatch()
 
     const actualProducts = Object.values(cartItems).map(cartItem => ({
-        [cartItem.id]: products[cartItem.product_id],
+        ...products[cartItem.productId],
+        quantity: cartItem.quantity
     }))
     
     useEffect(()=>{
@@ -19,12 +19,17 @@ const CartIndex = () => {
         dispatch(fetchProducts())
     }, [dispatch])
 
+    useEffect(() => {
+        console.log("actualProducts:", actualProducts);
+    }, [actualProducts])
     return (
-        <ul>
-            {actualProducts.map(product => {
-                return <li>{product.name}</li>
-            })}
-        </ul>
+        <>
+            <ul>
+                {actualProducts.map(product => {
+                    return <li>{product.name}</li>
+                })}
+            </ul>
+        </>
     )
 }
 
