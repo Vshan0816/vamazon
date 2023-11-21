@@ -118,3 +118,5 @@ const cartItemsReducer = (state = {}, action) => {
             return state;
     }
 }
+
+export default cartItemsReducer
