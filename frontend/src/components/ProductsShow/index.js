@@ -1,23 +1,44 @@
 import { useDispatch } from "react-redux"
 import { fetchProduct, getProduct} from "../../store/product"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useSelector } from "react-redux/es/hooks/useSelector"
 import { useParams } from "react-router-dom/cjs/react-router-dom.min"
 import sf6 from '../../assets/SF6.png'
 import './ProductsShow.css'
+import { createCartItem } from "../../store/cartItems"
+import { useHistory } from "react-router-dom/cjs/react-router-dom"
+
+
 const ProductsShow = () => {
     
 
     const { productId } = useParams()
     const dispatch = useDispatch();
+    const history = useHistory()
     const product = useSelector(getProduct(productId))
+    
 
     const beforeDecimal = parseInt(product.price)
     const afterDecimal = parseInt((product.price).toString().split('.')[1])
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
+        const storageCurrentUser = sessionStorage.getItem('currentUser')
+        console.log(storageCurrentUser)
+        setCurrentUser(storageCurrentUser)
     }, [productId, dispatch])
+
+    const [quantity, setQuantity] = useState(0)
+    const [currentUser, setCurrentUser] = useState(null)
+
+    const handleClick = async (e) => {
+        e.preventDefault()
+        if (currentUser !== null) {
+            await dispatch(createCartItem({quantity, product_id: product.id}))
+            .then(history.push('/cart'))
+        }
+    }
+
     return (
         <div className="showOuterDiv">
             
@@ -48,7 +69,9 @@ const ProductsShow = () => {
                 
             </div>
             <div className="purchase">
-                <button>Add To Cart</button>
+                <label>Quantity</label>
+                <input type="text" onChange={e => setQuantity(e.target.value)} value={quantity}></input>
+                <button className="button2" onClick={handleClick}>Add To Cart</button>
             </div>
             <div className="bottomDivider"></div>
         </div>    

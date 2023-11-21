@@ -61,7 +61,7 @@ export const fetchCartItem = cartItemId => async dispatch => {
 }
 
 export const createCartItem = cartItem => async dispatch => {
-    const res = await csrfFetch('api/cart_items', {
+    const res = await csrfFetch('/api/cart_items', {
         method: 'POST',
         body: JSON.stringify(cartItem),
         headers: {
@@ -72,11 +72,12 @@ export const createCartItem = cartItem => async dispatch => {
     if (res.ok) {
         const cartItem = await res.json();
         dispatch(receiveCartItem(cartItem));
+        return res
     }
 }
 
 export const updateCartItem = cartItem => async dispatch => {
-    const res = await csrfFetch(`api/cart_items/${cartItem.id}`, {
+    const res = await csrfFetch(`/api/cart_items/${cartItem.id}`, {
         method: 'PATCH',
         body: JSON.stringify(cartItem),
         headers: {
@@ -91,7 +92,7 @@ export const updateCartItem = cartItem => async dispatch => {
 }
 
 export const deleteCartItem = cartItemId => async dispatch => {
-    const res = await csrfFetch(`api/cart_items/${cartItemId}`, {
+    const res = await csrfFetch(`/api/cart_items/${cartItemId}`, {
         method: 'DELETE'
     });
 
