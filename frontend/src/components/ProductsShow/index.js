@@ -47,6 +47,9 @@ const ProductsShow = () => {
                 </div>
                 
             </div>
+            <div className="purchase">
+                <button>Add To Cart</button>
+            </div>
             <div className="bottomDivider"></div>
         </div>    
     )

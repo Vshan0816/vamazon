@@ -104,3 +104,12 @@
     background: #e6bc06;
     cursor: pointer;
 }
+
+.cart {
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.cart img{
+    height: 100%;
+}
