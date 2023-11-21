@@ -33,11 +33,12 @@ const ProductsShow = () => {
     const [currentUser, setCurrentUser] = useState(null)
 
     const cartItems = useSelector(getCartItems)
-    const hasCartItem = cartItems.some(item => item.userId === currentUser.id && item.productId === productId)
+    const hasCartItem = cartItems.some(item => item.userId === currentUser.id && item.productId === parseInt(productId))
     
 
     const handleClick = async (e) => {
         e.preventDefault()
+        console.log(hasCartItem)
         if (currentUser !== null) {
             await dispatch(createCartItem({quantity, product_id: product.id}))
             .then(history.push('/cart'))
