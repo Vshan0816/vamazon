@@ -17,6 +17,7 @@ function App() {
              <ProductsIndex/>
           </Route>
           <Route path="/cart">
+            <Navigation/>
             <CartIndex/>
           </Route>
           <Route path="/products/:productId">

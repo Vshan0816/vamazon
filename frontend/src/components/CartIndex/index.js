@@ -26,7 +26,12 @@ const CartIndex = () => {
         <>
             <ul>
                 {actualProducts.map(product => {
-                    return <li>{product.name}</li>
+                    return (
+                        <>
+                            <li>{product.name}</li>
+                            <li>{product.quantity}</li>
+                        </>
+                        )
                 })}
             </ul>
         </>
