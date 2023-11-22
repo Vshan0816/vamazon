@@ -3,6 +3,7 @@ import { fetchProducts, getProducts } from "../../store/product"
 import { useEffect } from "react"
 import { useSelector } from "react-redux/es/hooks/useSelector"
 import { fetchCartItems, getCartItems } from "../../store/cartItems"
+import CartIndexItem from "../CartIndexItem"
 
 const CartIndex = () => {
     const cartItems= useSelector(state => state.cartItems)
@@ -10,7 +11,9 @@ const CartIndex = () => {
     const dispatch = useDispatch()
 
     const actualProducts = Object.values(cartItems).map(cartItem => ({
+        cartItemId: cartItem.id,
         ...products[cartItem.productId],
+        
         quantity: cartItem.quantity
     }))
     
@@ -27,10 +30,7 @@ const CartIndex = () => {
             <ul>
                 {actualProducts.map(product => {
                     return (
-                        <>
-                            <li>{product.name}</li>
-                            <li>{product.quantity}</li>
-                        </>
+                        <CartIndexItem product={product} key={product.id}/>
                         )
                 })}
             </ul>
