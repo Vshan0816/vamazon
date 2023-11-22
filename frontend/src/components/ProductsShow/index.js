@@ -25,22 +25,25 @@ const ProductsShow = () => {
         dispatch(fetchProduct(productId))
         const storageCurrentUser = sessionStorage.getItem('currentUser')
         console.log(storageCurrentUser)
-        setCurrentUser(storageCurrentUser)
-        console.log(hasCartItem)
+        setCurrentUser(JSON.parse(storageCurrentUser))
+        console.log(currentUser?.id)
     }, [productId, dispatch])
 
     const [quantity, setQuantity] = useState(0)
     const [currentUser, setCurrentUser] = useState(null)
 
     const cartItems = useSelector(getCartItems)
-    const hasCartItem = cartItems.some(item => item.userId === currentUser.id && item.productId === parseInt(productId))
+    
     
 
     const handleClick = async (e) => {
         e.preventDefault()
+        
+        const hasCartItem = cartItems.some(item => item.userId === currentUser?.id && item.productId === parseInt(productId))
+        
         console.log(hasCartItem)
-        if (currentUser !== null) {
-            await dispatch(createCartItem({quantity, product_id: product.id}))
+        if (currentUser !== null && !hasCartItem) {
+            await dispatch(createCartItem({quantity, product_id: product?.id}))
             .then(history.push('/cart'))
         }
     }
